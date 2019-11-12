@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title></title>
+   <script>
+
+    //Ej: calculaPrimos(5) => [2,3,5,7,13]
+    function calculaPrimos(n){
+      var primos=[];
+      // Calcular primos
+      // mientras el número de primos calculado
+      // sea menor que n
+      var posiblePrimoActual = 2;
+      while (primos.length < n){
+        if (primo(posiblePrimoActual)) {
+          primos.push(posiblePrimoActual);
+        }
+        posiblePrimoActual = posiblePrimoActual + 1;
+      }
+      return primos;
+    }
+     
+    function primo(numero) {
+      for (var i = 2; i < numero; i++) {
+        if (numero % i === 0) {
+          return false;
+        }
+      }
+      return numero !== 1;
+    }
+
+    document.write(calculaPrimos(15));
+
+   </script>
+    </head>
+ <body>
+  	<div>
+  		<h1>hoja en blanco</h1>
+  	</div>
+
+   
+  	<div>
+  		<h1></h1>
+  	</div>
+ </body>
+</html>
